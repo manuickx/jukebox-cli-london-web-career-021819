@@ -46,6 +46,7 @@ output = ""
   else
     puts "Invalid input, please try again"
   end 
+output
 end
 
 def exit_jukebox
