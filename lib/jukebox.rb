@@ -37,7 +37,7 @@ puts "Please enter a song name or number:"
 value = gets.chomp
 output = ""
   list.each do |number, song|  
-    if value.to_i == number || value == song.split('-').last
+    if value.to_i == number || value == song.split(' - ').last
       output = "Playing #{list[number]}"
     end
   end
