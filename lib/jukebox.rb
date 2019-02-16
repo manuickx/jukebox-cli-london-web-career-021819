@@ -35,17 +35,19 @@ end
 list
 puts "Please enter a song name or number:"
 value = gets.chomp
-output = ""
+output = nil
   list.each do |number, song|  
-    if value.to_i == number || value == song
-      output = "Playing #{list[number]}"
+    if value.to_i == number
+      output = list[number]
+    elsif value == song
+      output = list[number]
     end
   end
-  if output.include?("Playing")
-    puts output
-  else
+  if output == nil
     puts "Invalid input, please try again"
-  end 
+  else
+    puts "Playing " + output
+  end
 end
 
 def exit_jukebox
